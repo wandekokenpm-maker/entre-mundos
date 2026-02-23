@@ -1,0 +1,1 @@
+valor_cura = 1;
