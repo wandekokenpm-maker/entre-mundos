@@ -1,8 +1,4 @@
 // ======================================
-// SISTEMA DE ANIMAÇÃO (PRIORIDADE TOTAL)
-// ======================================
-
-// ======================================
 // SISTEMA DE ANIMAÇÃO (PRIORIDADE)
 // ======================================
 
@@ -16,44 +12,30 @@ else if (invulneravel)
 }
 else if (lanterna.ativo)
 {
-    // Usando lanterna
     if (!no_chao)
-    {
-        sprite_index = spr_pulo; // ou criar spr_pulo_lanterna se quiser
-    }
+        sprite_index = spr_pulo;
     else if (abs(vel_x) > 0)
-    {
         sprite_index = spr_run_lanterna;
-    }
     else
-    {
         sprite_index = spr_usa_lanterna;
-    }
 }
 else
 {
-    // Normal
     if (!no_chao)
-    {
         sprite_index = spr_pulo;
-    }
     else if (abs(vel_x) > 0)
-    {
         sprite_index = spr_run;
-    }
     else
-    {
         sprite_index = spr_idle;
-    }
 }
 
-
-
-// Mantém direção
 image_xscale = facing;
+
+
 // ======================================
 // SISTEMA DE MORTE
 // ======================================
+
 if (estado == "morrendo")
 {
     vel_x = 0;
@@ -69,9 +51,7 @@ if (estado == "morrendo")
     }
 
     if (timer_morte <= 0)
-    {
         room_restart();
-    }
 
     exit;
 }
@@ -80,20 +60,22 @@ if (estado == "morrendo")
 // ======================================
 // CONTROLE DO EMPURRÃO (DANO)
 // ======================================
+
 if (estado_dano)
 {
     timer_dano--;
 
+    vel_x *= 0.9; // desaceleração suave
+
     if (timer_dano <= 0)
-    {
         estado_dano = false;
-    }
 }
 
 
 // ======================================
 // VERIFICA SE NÃO ESTÁ PRESO
 // ======================================
+
 if (verificar_prisao)
 {
     if (place_meeting(x, y, obj_chao))
@@ -113,6 +95,7 @@ if (verificar_prisao)
 // ======================================
 // GRAVIDADE
 // ======================================
+
 vel_y += gravidade;
 
 
@@ -123,17 +106,21 @@ vel_y += gravidade;
 var dir = 0;
 
 if (keyboard_check(vk_right)) dir = 1;
-if (keyboard_check(vk_left)) dir = -1;
+if (keyboard_check(vk_left))  dir = -1;
 
-vel_x = dir * velocidade;
-if (dir != 0)
-    {
+if (!estado_dano) // 👈 IMPEDIR CANCELAR KNOCKBACK
+{
+    vel_x = dir * velocidade;
+
+    if (dir != 0)
         facing = dir;
-    }
+}
+
 
 // ======================================
 // COLISÃO HORIZONTAL
 // ======================================
+
 if (place_meeting(x + vel_x, y, obj_chao))
 {
     while (!place_meeting(x + sign(vel_x), y, obj_chao))
@@ -148,6 +135,7 @@ x += vel_x;
 // ======================================
 // COLISÃO VERTICAL
 // ======================================
+
 if (place_meeting(x, y + vel_y, obj_chao))
 {
     while (!place_meeting(x, y + sign(vel_y), obj_chao))
@@ -170,6 +158,7 @@ y += vel_y;
 // ======================================
 // PULO
 // ======================================
+
 if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 {
     vel_y = forca_pulo;
@@ -179,6 +168,7 @@ if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 // ======================================
 // COLISÃO COM INIMIGO
 // ======================================
+
 var inimigo = instance_place(x, y, obj_inimigo);
 
 if (inimigo != noone && !invulneravel)
@@ -187,27 +177,26 @@ if (inimigo != noone && !invulneravel)
 
     invulneravel = true;
     timer_invulneravel = duracao_invulneravel;
-	
-	 sprite_index = spr_invulneravel;
+
+    sprite_index = spr_invulneravel;
     image_index = 0;
     image_speed = 1;
 
     estado_dano = true;
     timer_dano = duracao_dano;
 
-    var empurrao = 4;
+    var empurrao = 3;
 
     if (x < inimigo.x)
         vel_x = -empurrao;
     else
         vel_x = empurrao;
 
-    vel_y = -6;
+    vel_y = -4; // impulso vertical forte
 
-    // Inimigo para por 1 segundo
-    inimigo.timer_parado = room_speed;
+    inimigo.timer_parado = room_speed; // para inimigo 1s
 
-    // Garante que não fique preso
+    // evita ficar preso no chão
     if (place_meeting(x, y, obj_chao))
     {
         while (place_meeting(x, y, obj_chao))
@@ -221,6 +210,7 @@ if (inimigo != noone && !invulneravel)
 // ======================================
 // INVULNERABILIDADE
 // ======================================
+
 if (invulneravel)
 {
     timer_invulneravel--;
@@ -228,7 +218,6 @@ if (invulneravel)
     if (timer_invulneravel <= 0)
     {
         invulneravel = false;
-        sprite_index = sprite_normal;
     }
 }
 
@@ -236,6 +225,7 @@ if (invulneravel)
 // ======================================
 // ATIVA MORTE
 // ======================================
+
 if (vida_atual <= 0 && estado != "morrendo")
 {
     estado = "morrendo";
