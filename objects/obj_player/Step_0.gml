@@ -19,6 +19,7 @@ else if (lanterna.ativo)
     else
         sprite_index = spr_usa_lanterna;
 }
+
 else
 {
     if (!no_chao)
@@ -159,9 +160,24 @@ y += vel_y;
 // PULO
 // ======================================
 
+/*if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
+{
+    vel_y = forca_pulo;
+}
+*/
+// ======================================
+// PULO
+// ======================================
+
 if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 {
     vel_y = forca_pulo;
+
+    // 🔦 DESLIGA A LANTERNA AO PULAR
+    with (obj_lanterna)
+    {
+        ativo = false;
+    }
 }
 
 

@@ -18,6 +18,10 @@ facing = 1;
 vida_maxima = 10;
 vida_atual = 3;
 
+if (variable_global_exists("player_vida"))
+{
+    vida_atual = global.player_vida;
+}
 
 // ======================================
 // INVULNERABILIDADE
@@ -54,3 +58,6 @@ verificar_prisao = false;
 // ======================================
 sprite_normal = sprite_index;
 lanterna = instance_create_layer(x, y, layer, obj_lanterna);
+
+// SISTEMA DE CHAVE
+tem_chave = false;
