@@ -1,3 +1,6 @@
+
+
+
 global.mundo = 1;
 
 energia_max =20;

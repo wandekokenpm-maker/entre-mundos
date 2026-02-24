@@ -58,6 +58,7 @@ if (estado == "morrendo")
 }
 
 
+
 // ======================================
 // CONTROLE DO EMPURRÃO (DANO)
 // ======================================
@@ -156,15 +157,7 @@ else
 y += vel_y;
 
 
-// ======================================
-// PULO
-// ======================================
 
-/*if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
-{
-    vel_y = forca_pulo;
-}
-*/
 // ======================================
 // PULO
 // ======================================
@@ -173,7 +166,7 @@ if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 {
     vel_y = forca_pulo;
 
-    // 🔦 DESLIGA A LANTERNA AO PULAR
+   //DESLIGA A LANTERNA AO PULAR
     with (obj_lanterna)
     {
         ativo = false;
@@ -250,3 +243,4 @@ if (vida_atual <= 0 && estado != "morrendo")
     vel_x = 0;
     vel_y = 0;
 }
+

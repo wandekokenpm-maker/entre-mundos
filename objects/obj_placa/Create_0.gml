@@ -11,7 +11,9 @@ texto =
 
 "Pressionar a tecla [Q] é sua única esperança de saída desse lugar.#" +
 
-"Mas cuidado essa tecnologia é instável. Se as recargas chegarem a zero, a máquina pode explodir, e levar você junto com ela.";
+"Mas cuidado essa tecnologia é instável. Se as recargas chegarem a zero, a máquina pode explodir, e levar você junto com ela."+
+
+"Você pode se mover utilizando as setas do teclado."
 
 
 // ==============================

@@ -43,8 +43,8 @@ timer_dano = 0;
 // SISTEMA DE MORTE
 // ======================================
 estado = "normal";
-duracao_morte = room_speed * 2; // 2 segundos
-timer_morte = 0;
+duracao_morte = room_speed * 2; 
+timer_morte = 0
 
 
 // ======================================
