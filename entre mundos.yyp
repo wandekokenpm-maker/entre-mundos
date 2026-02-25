@@ -51,6 +51,7 @@
     {"id":{"name":"spr_cobertura","path":"sprites/spr_cobertura/spr_cobertura.yy",},},
     {"id":{"name":"spr_elementos","path":"sprites/spr_elementos/spr_elementos.yy",},},
     {"id":{"name":"spr_espinhos","path":"sprites/spr_espinhos/spr_espinhos.yy",},},
+    {"id":{"name":"spr_fantasma","path":"sprites/spr_fantasma/spr_fantasma.yy",},},
     {"id":{"name":"spr_fundo","path":"sprites/spr_fundo/spr_fundo.yy",},},
     {"id":{"name":"spr_idle","path":"sprites/spr_idle/spr_idle.yy",},},
     {"id":{"name":"spr_inimigo","path":"sprites/spr_inimigo/spr_inimigo.yy",},},
@@ -72,9 +73,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
     {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
-    {"roomId":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
