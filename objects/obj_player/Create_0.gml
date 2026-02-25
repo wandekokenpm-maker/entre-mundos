@@ -61,3 +61,27 @@ lanterna = instance_create_layer(x, y, layer, obj_lanterna);
 
 // SISTEMA DE CHAVE
 tem_chave = false;
+
+vida_max = 5;
+vida = vida_max;
+
+invencivel = false;
+tempo_invencivel = 0;
+
+//tteste
+
+function tomar_dano(valor)
+{
+    if (!invencivel && estado != "morrendo")
+    {
+        vida -= valor;
+
+        if (vida <= 0)
+        {
+            estado = "morrendo";
+        }
+
+        invencivel = true;
+        tempo_invencivel = room_speed; // 1 segundo invencível
+    }
+}
