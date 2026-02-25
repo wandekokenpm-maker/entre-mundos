@@ -93,29 +93,22 @@ switch (estado)
 }
 
 
-// =========================
+/// =========================
 // DANO DA LANTERNA
 // =========================
-if (instance_exists(obj_player))
+
+var _lanterna = instance_nearest(x, y, obj_lanterna);
+
+if (instance_exists(_lanterna))
 {
-    var _p = obj_player;
-
-    // Só toma dano se lanterna estiver ligada
-    if (_p.lanterna_ativa)
+    if (_lanterna.ativo && point_distance(x, y, _lanterna.x, _lanterna.y) < 120)
     {
-        if (point_distance(x, y, _p.x, _p.y) < 100)
-        {
-            timer_dano++;
+        timer_dano++;
 
-            if (timer_dano >= room_speed)
-            {
-                vida -= 1;
-                tempo_dano_sprite = room_speed / 2;
-                timer_dano = 0;
-            }
-        }
-        else
+        if (timer_dano >= room_speed)
         {
+            vida -= 1;
+            tempo_dano_sprite = room_speed / 2;
             timer_dano = 0;
         }
     }
@@ -138,4 +131,15 @@ if (place_meeting(x, y, obj_player) && cooldown_dano <= 0)
     }
 
     cooldown_dano = room_speed; // 1 segundo entre danos
+}
+
+
+if (tempo_dano_sprite > 0)
+{
+    tempo_dano_sprite--;
+    sprite_index = spr_boss_dano;
+}
+else
+{
+    sprite_index = spr_boss;
 }

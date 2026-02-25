@@ -70,7 +70,7 @@ tempo_invencivel = 0;
 
 //tteste
 
-function tomar_dano(valor)
+/*function tomar_dano(valor)
 {
     if (!invencivel && estado != "morrendo")
     {
@@ -84,4 +84,30 @@ function tomar_dano(valor)
         invencivel = true;
         tempo_invencivel = room_speed; // 1 segundo invencível
     }
+}
+*/
+function tomar_dano(valor)
+{
+    if (invulneravel) return;
+
+    vida_atual -= valor;
+
+    invulneravel = true;
+    timer_invulneravel = duracao_invulneravel;
+
+    sprite_index = spr_invulneravel;
+    image_index = 0;
+    image_speed = 1;
+
+    estado_dano = true;
+    timer_dano = duracao_dano;
+
+    var empurrao = 3;
+
+    if (other.x < x)
+        vel_x = empurrao;
+    else
+        vel_x = -empurrao;
+
+    vel_y = -4;
 }
