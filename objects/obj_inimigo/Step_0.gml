@@ -4,6 +4,10 @@
 // ======================================
 if (vida <= 0)
 {
+	 repeat (500)
+    {
+        var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
+    }
     instance_destroy();
     exit;
 }

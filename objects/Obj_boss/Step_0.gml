@@ -5,7 +5,7 @@ if (vida <= 0)
 {
     instance_create_layer(x, y, "layer_constante", obj_chave);
 
-    repeat (40)
+    repeat (1100)
     {
         var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
     }
@@ -52,7 +52,7 @@ switch (estado)
         if (timer <= 0)
         {
             estado = "parado1";
-            timer = room_speed * 3;
+            timer = room_speed * 5;
         }
 
     break;
@@ -74,7 +74,7 @@ switch (estado)
             }
 
             estado = "parado2";
-            timer = room_speed * 2;
+            timer = room_speed * 5;
         }
 
     break;

@@ -75,7 +75,6 @@
     {"id":{"name":"spr_run","path":"sprites/spr_run/spr_run.yy",},},
     {"id":{"name":"spr_usa_lanterna","path":"sprites/spr_usa_lanterna/spr_usa_lanterna.yy",},},
     {"id":{"name":"spr_vida","path":"sprites/spr_vida/spr_vida.yy",},},
-    {"id":{"name":"Sprite27","path":"sprites/Sprite27/Sprite27.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
   ],
   "resourceType":"GMProject",
