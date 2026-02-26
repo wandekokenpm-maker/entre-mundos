@@ -64,6 +64,7 @@
     {"id":{"name":"snd_morte_boss","path":"sounds/snd_morte_boss/snd_morte_boss.yy",},},
     {"id":{"name":"snd_morte_inimigo","path":"sounds/snd_morte_inimigo/snd_morte_inimigo.yy",},},
     {"id":{"name":"snd_morte","path":"sounds/snd_morte/snd_morte.yy",},},
+    {"id":{"name":"snd_porta","path":"sounds/snd_porta/snd_porta.yy",},},
     {"id":{"name":"snd_pulo","path":"sounds/snd_pulo/snd_pulo.yy",},},
     {"id":{"name":"snd_troca_mundo","path":"sounds/snd_troca_mundo/snd_troca_mundo.yy",},},
     {"id":{"name":"spr_bateria","path":"sprites/spr_bateria/spr_bateria.yy",},},
@@ -102,9 +103,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
-    {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
+    {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

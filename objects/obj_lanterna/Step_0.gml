@@ -55,3 +55,41 @@ if (!place_meeting(x, y, obj_inimigo))
 {
     timer_dano = 0;
 }
+
+// ==========================
+// DETECTAR COLISÃO COM INIMIGO OU BOSS
+// ==========================
+
+var hit_inimigo = place_meeting(x, y, obj_inimigo);
+var hit_boss    = place_meeting(x, y, Obj_boss);
+
+if (ativo && (hit_inimigo || hit_boss))
+{
+    if (!atingindo)
+    {
+        // começa som em loop
+        som_lanterna_id = audio_play_sound(snd_lanterna, 1, true)
+		audio_sound_gain(som_lanterna_id, 0.3, 0);
+        atingindo = true;
+    }
+	// FAÍSCAS
+   
+    if (irandom(8) == 0) // controla quantidade
+    {
+        part_particles_create(global.ps_faisca, x, y, global.par_faisca, 2);
+    }
+}
+else
+{
+    if (atingindo)
+    {
+        // para imediatamente
+        if (som_lanterna_id != -1)
+        {
+            audio_stop_sound(snd_lanterna);
+        }
+
+        atingindo = false;
+        som_lanterna_id = -1;
+    }
+}

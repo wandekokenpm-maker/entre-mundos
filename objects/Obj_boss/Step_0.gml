@@ -1,16 +1,105 @@
-// =========================
-// MORTE
-// =========================
-if (vida <= 0)
+if (vida <= 0 && !morrendo)
 {
-    instance_create_layer(x, y, "layer_constante", obj_chave);
+    morrendo = true;
+    fase_morte = 1;
+    timer_morte = room_speed * 3;
 
-    repeat (1500)
+    sprite_index = spr_boss_dano;
+    
+    audio_stop_sound(mus_boss);
+
+    // iniciar tremor da tela
+    shake_timer = room_speed * 3;
+    shake_forca = 8;
+
+    var cam = view_camera[0];
+    cam_x_original = camera_get_view_x(cam);
+    cam_y_original = camera_get_view_y(cam);
+}
+    
+
+    // =========================
+    // FASE 1 – 3 segundos tremendo
+    // =========================
+    if (vida <= 0 && !morrendo)
+{
+    morrendo = true;
+    fase_morte = 1;
+    timer_morte = room_speed * 3;
+
+    sprite_index = spr_boss_dano;
+ 
+    audio_stop_sound(mus_boss);
+
+    // iniciar tremor da tela
+    shake_timer = room_speed * 3;
+    shake_forca = 8;
+
+    var cam = view_camera[0];
+    cam_x_original = camera_get_view_x(cam);
+    cam_y_original = camera_get_view_y(cam);
+}
+    
+   if (morrendo)
+{
+    var cam = view_camera[0];
+
+    // =========================
+    // TREMOR DE TELA
+    // =========================
+    if (shake_timer > 0)
     {
-        var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
+        shake_timer--;
+
+        var offset_x = random_range(-shake_forca, shake_forca);
+        var offset_y = random_range(-shake_forca, shake_forca);
+
+        camera_set_view_pos(cam, cam_x_original + offset_x, cam_y_original + offset_y);
     }
-	audio_stop_sound(mus_boss);
-    instance_destroy();
+    else
+    {
+        camera_set_view_pos(cam, cam_x_original, cam_y_original);
+    }
+
+    // =========================
+    // FASE 1 – ESPERA 3s
+    // =========================
+    if (fase_morte == 1)
+    {
+        timer_morte--;
+
+        if (timer_morte <= 0)
+        {
+            audio_play_sound(snd_morte_boss, 1, false);
+
+            repeat (1500)
+            {
+                part_particles_create(global.ps, x, y, global.par_explosao, 1);
+            }
+
+            instance_create_layer(x, y, "layer_constante", obj_chave);
+
+            visible = false;
+
+            fase_morte = 2;
+            timer_morte = room_speed * 1.5;
+        }
+    }
+    // =========================
+    // FASE 2 – FINAL
+    // =========================
+    else if (fase_morte == 2)
+    {
+        timer_morte--;
+
+        if (timer_morte <= 0)
+        {
+            audio_play_sound(mus_end, 1, true);
+            instance_destroy();
+        }
+    }
+
+    exit;
 }
 
 

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.0337188,
+  "duration":2.4237642,
   "exportDir":"",
   "name":"snd_morte_boss",
   "parent":{

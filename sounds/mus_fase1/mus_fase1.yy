@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":262.45224,
+  "duration":226.29007,
   "exportDir":"",
   "name":"mus_fase1",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mus_fase1.mp3",
+  "soundFile":"mus_fase1.ogg",
   "volume":1.0,
 }

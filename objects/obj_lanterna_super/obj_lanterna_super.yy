@@ -33,6 +33,9 @@
     "name":"spr_lanterna",
     "path":"sprites/spr_lanterna/spr_lanterna.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_lanterna_super",
+    "path":"sprites/spr_lanterna_super/spr_lanterna_super.yy",
+  },
   "visible":true,
 }
