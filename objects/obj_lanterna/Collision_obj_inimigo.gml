@@ -10,5 +10,6 @@ if (ativo)
     {
         other.vida -= 1;
         timer_dano = 0;
+		
     }
 }

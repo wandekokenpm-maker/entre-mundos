@@ -3,11 +3,13 @@
 // MORTE
 // ======================================
 if (vida <= 0)
-{
+{		
+	audio_play_sound(snd_morte_inimigo, 1, false);
 	 repeat (500)
     {
         var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
     }
+	
     instance_destroy();
     exit;
 }

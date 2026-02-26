@@ -110,7 +110,7 @@ var dir = 0;
 if (keyboard_check(vk_right)) dir = 1;
 if (keyboard_check(vk_left))  dir = -1;
 
-if (!estado_dano) // 👈 IMPEDIR CANCELAR KNOCKBACK
+if (!estado_dano) 
 {
     vel_x = dir * velocidade;
 
@@ -165,6 +165,7 @@ y += vel_y;
 if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 {
     vel_y = forca_pulo;
+	    audio_play_sound(snd_pulo, 1, false);
 
    //DESLIGA A LANTERNA AO PULAR
     with (obj_lanterna)
@@ -183,6 +184,7 @@ var inimigo = instance_place(x, y, obj_inimigo);
 if (inimigo != noone && !invulneravel)
 {
     vida_atual -= 1;
+	
 
     invulneravel = true;
     timer_invulneravel = duracao_invulneravel;
@@ -195,6 +197,7 @@ if (inimigo != noone && !invulneravel)
     timer_dano = duracao_dano;
 
     var empurrao = 3;
+	audio_play_sound(snd_dano, 1, false);
 
     if (x < inimigo.x)
         vel_x = -empurrao;
@@ -242,5 +245,7 @@ if (vida_atual <= 0 && estado != "morrendo")
 
     vel_x = 0;
     vel_y = 0;
+	audio_play_sound(snd_morte, 1, false);
+	
 }
 

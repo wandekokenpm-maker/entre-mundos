@@ -10,5 +10,5 @@ if (obj_controle_mundo.energia_atual < obj_controle_mundo.energia_max)
     }
 }
 
-// Destrói a recarga
+audio_play_sound(snd_coleta, 1, false);
 instance_destroy();

@@ -8,4 +8,5 @@ if (instance_exists(obj_lanterna))
 }
 
 // Destroi a bateria depois de pegar
+audio_play_sound(snd_coleta, 1, false);
 instance_destroy();

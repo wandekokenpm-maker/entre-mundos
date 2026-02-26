@@ -9,7 +9,7 @@ if (vida <= 0)
     {
         var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
     }
-
+	audio_stop_sound(mus_boss);
     instance_destroy();
 }
 
@@ -82,6 +82,7 @@ switch (estado)
 
             estado = "parado2";
             timer = room_speed * 5;
+			audio_play_sound(snd_boss_voz, 1, false)
         }
 
     break;
@@ -135,6 +136,7 @@ if (place_meeting(x, y, obj_player) && cooldown_dano <= 0)
     with (obj_player)
     {
         tomar_dano(1);
+			audio_play_sound(snd_dano, 1, false);
     }
 
     cooldown_dano = room_speed; // 1 segundo entre danos

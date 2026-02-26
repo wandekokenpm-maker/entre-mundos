@@ -34,3 +34,7 @@ part_type_life(global.par_explosao, 30, 60);
 // FLASH
 flash_alpha = 0;
 flash_timer = 0;
+
+// Controle de música
+musica_atual = -1;
+
