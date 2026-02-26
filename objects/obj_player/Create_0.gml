@@ -16,7 +16,7 @@ facing = 1;
 // VIDA
 // ======================================
 vida_maxima = 10;
-vida_atual = 3;
+vida_atual = 5;
 
 if (variable_global_exists("player_vida"))
 {
@@ -68,24 +68,7 @@ vida = vida_max;
 invencivel = false;
 tempo_invencivel = 0;
 
-//tteste
 
-/*function tomar_dano(valor)
-{
-    if (!invencivel && estado != "morrendo")
-    {
-        vida -= valor;
-
-        if (vida <= 0)
-        {
-            estado = "morrendo";
-        }
-
-        invencivel = true;
-        tempo_invencivel = room_speed; // 1 segundo invencível
-    }
-}
-*/
 function tomar_dano(valor)
 {
     if (invulneravel) return;

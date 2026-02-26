@@ -1,0 +1,44 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"TileSet3",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"","closed_edge":true,"name":"","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        1233,1234,1235,1236,1237,1238,1239,1240,1241,1242,1243,1245,1246,1247,1248,1327,1328,1329,1330,1331,
+        1332,1333,1334,1335,1336,1337,1338,1339,1340,1341,1342,1436,1435,1433,1434,1432,1431,1430,1429,1428,
+        1427,1426,1425,1424,1423,1422,1426,
+      ],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"TileSet3",
+  "out_columns":39,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"entre mundos",
+    "path":"entre mundos.yyp",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"tailef",
+    "path":"sprites/tailef/tailef.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":1504,
+}

@@ -2,8 +2,8 @@ image_xscale = .5;
 image_yscale = .5;
 
 // VIDA
-vida_max = 20;
-vida = 20;
+vida_max = 40;
+vida = 1;
 
 // MOVIMENTO
 vel = 0.7;

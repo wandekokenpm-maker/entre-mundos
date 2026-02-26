@@ -5,7 +5,7 @@ if (vida <= 0)
 {
     instance_create_layer(x, y, "layer_constante", obj_chave);
 
-    repeat (1100)
+    repeat (1500)
     {
         var p = part_particles_create(global.ps, x, y, global.par_explosao, 1);
     }
@@ -28,6 +28,13 @@ if (instance_exists(_player))
         estado = "perseguindo";
         timer = room_speed * 3;
     }
+}
+if (instance_exists(_player))
+{
+    if (_player.x > x)
+        image_xscale = 0.5;   // olhando para direita
+    else
+        image_xscale = -0.5;  // olhando para esquerda
 }
 
 
@@ -70,7 +77,7 @@ switch (estado)
                 var ang = i * (360 / qtd);
                 var b = instance_create_layer(x, y, "layer_constante", obj_bola_de_fogo);
                 b.direction = ang;
-                b.speed = 4;
+                b.speed = 3;
             }
 
             estado = "parado2";

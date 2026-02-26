@@ -1,28 +1,3 @@
-/*draw_text(20, 20, "Energia: " + string(energia_atual));
-
-// ===== MOSTRADOR DE BATERIA =====
-var lanterna = instance_find(obj_lanterna, 0);
-
-if (lanterna != noone)
-{
-    draw_set_color(c_white);
-    draw_set_font(-1);
-
-    draw_text(20, 80, "Bateria: " + string(lanterna.cargas));
-}
-if (global.dialogo_ativo)
-{
-    var margem = 40;
-    var largura = display_get_gui_width() - margem * 2;
-    var altura = 100;
-    var y_pos = display_get_gui_height() - altura - 20;
-
-    draw_set_color(c_black);
-    draw_rectangle(margem, y_pos, margem + largura, y_pos + altura, false);
-
-    draw_set_color(c_white);
-    draw_text(margem + 20, y_pos + 20, global.texto_atual);
-}*/
 // =====================================
 // ENERGIA (MUNDO) - spr_recarga
 // =====================================
@@ -67,4 +42,12 @@ if (lanterna != noone)
             1
         );
     }
+}
+//flash
+if (flash_alpha > 0)
+{
+    draw_set_color(c_white);
+    draw_set_alpha(flash_alpha);
+    draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+    draw_set_alpha(1);
 }
