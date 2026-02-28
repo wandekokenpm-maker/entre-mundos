@@ -77,7 +77,7 @@ if (vida <= 0 && !morrendo)
                 part_particles_create(global.ps, x, y, global.par_explosao, 1);
             }
 
-            instance_create_layer(x, y, "layer_constante", obj_chave);
+            instance_create_layer(x, y, layer, obj_chave);
 
             visible = false;
 
@@ -164,7 +164,7 @@ switch (estado)
             for (var i = 0; i < qtd; i++)
             {
                 var ang = i * (360 / qtd);
-                var b = instance_create_layer(x, y, "layer_constante", obj_bola_de_fogo);
+                var b = instance_create_layer(x, y, layer, obj_bola_de_fogo);
                 b.direction = ang;
                 b.speed = 3;
             }

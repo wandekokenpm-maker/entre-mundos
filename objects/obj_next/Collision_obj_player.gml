@@ -18,4 +18,15 @@ if (lanterna != noone)
 }
 
 // ===== TROCA DE ROOM =====
-room_goto_next()
+// cria transição se não existir
+if (!instance_exists(obj_transicao))
+{
+    instance_create_layer(0, 0, "layer_constante", obj_transicao);
+}
+
+// chama transição
+with (obj_transicao)
+{
+    estado = "fade_out";
+    proxima_room = room_next(room); 
+}
