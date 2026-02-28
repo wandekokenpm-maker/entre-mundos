@@ -37,5 +37,9 @@ creditos = [
 " Heroic Demise - site Opengameart.org",
 
 "",
+"Efeitos sonoros",
+"Diego Wandekoken Passos",
+"SoundPack01 - - site Opengameart.org",
+"",
 "Obrigado por jogar!"
 ];

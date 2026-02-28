@@ -10,4 +10,5 @@ if (other.estado != "morrendo")
 
     other.sprite_index = spr_morto;
     other.image_index = 0;
+audio_play_sound(snd_morte, 1, false);
 }

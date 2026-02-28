@@ -94,3 +94,4 @@ function tomar_dano(valor)
 
     vel_y = -4;
 }
+estava_no_chao = false;
