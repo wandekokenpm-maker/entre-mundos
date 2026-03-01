@@ -1,7 +1,7 @@
 
 global.mundo = 1;
 
-energia_max = 20;
+energia_max = 100;
 energia_atual = 10;
 
 custo_troca = 1;

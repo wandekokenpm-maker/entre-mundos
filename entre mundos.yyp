@@ -122,11 +122,11 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"roomId":{"name":"rm_level3","path":"rooms/rm_level3/rm_level3.yy",},},
+    {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
     {"roomId":{"name":"rm_creditos","path":"rooms/rm_creditos/rm_creditos.yy",},},
   ],
   "templateType":"game",

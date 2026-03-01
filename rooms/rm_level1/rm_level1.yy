@@ -312,6 +312,8 @@
     {"name":"inst_70BFDE10","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_6F96D758","path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"inst_537F6FB8","path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"inst_3721167B","path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"inst_3A06DE9B","path":"rooms/rm_level1/rm_level1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -586,6 +588,8 @@
         {"$GMRInstance":"v4","%Name":"inst_4D2EE9BB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D2EE9BB","objectId":{"name":"obj_espinhos","path":"objects/obj_espinhos/obj_espinhos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2816.0,"y":752.0,},
         {"$GMRInstance":"v4","%Name":"inst_70BFDE10","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70BFDE10","objectId":{"name":"obj_espinhos","path":"objects/obj_espinhos/obj_espinhos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2832.0,"y":752.0,},
         {"$GMRInstance":"v4","%Name":"inst_6F96D758","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6F96D758","objectId":{"name":"obj_espinhos","path":"objects/obj_espinhos/obj_espinhos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2848.0,"y":752.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3721167B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3721167B","objectId":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2944.0,"y":672.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3A06DE9B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A06DE9B","objectId":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":8.0,"x":2960.0,"y":560.0,},
       ],"layers":[],"name":"layer_constante","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_692C5285","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_692C5285","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":3.5625,"scaleY":3.516129,"spriteId":{"name":"spr_janela","path":"sprites/spr_janela/spr_janela.yy",},"x":129.0,"y":870.0,},
