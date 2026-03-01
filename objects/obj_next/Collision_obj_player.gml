@@ -1,4 +1,4 @@
-// ===== SALVA STATUS DO PLAYER =====
+//SALVA STATUS DO PLAYER
 
 // Vida
 global.player_vida = other.vida_atual;
@@ -17,14 +17,12 @@ if (lanterna != noone)
     global.player_cargas = lanterna.cargas;
 }
 
-// ===== TROCA DE ROOM =====
-// cria transição se não existir
+// TROCA DE ROOM 
 if (!instance_exists(obj_transicao))
 {
     instance_create_layer(0, 0, "layer_constante", obj_transicao);
 }
 
-// chama transição
 with (obj_transicao)
 {
     estado = "fade_out";

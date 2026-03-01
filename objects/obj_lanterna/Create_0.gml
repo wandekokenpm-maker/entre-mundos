@@ -16,9 +16,9 @@ dano_por_segundo = 1.5;
 // Controle do som contínuo
 som_lanterna_id = -1;
 atingindo = false;
-// ==========================
+
 // PARTÍCULAS DE FAÍSCA
-// ==========================
+
 if (!variable_global_exists("ps_faisca"))
 {
     global.ps_faisca = part_system_create();

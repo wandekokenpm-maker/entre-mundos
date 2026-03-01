@@ -1,6 +1,5 @@
-// ======================================
-// SISTEMA DE MORTE
-// ======================================
+
+// MORTE
 
 if (estado == "morrendo")
 {
@@ -22,10 +21,7 @@ if (estado == "morrendo")
     exit;
 }
 
-
-// ======================================
 // CONTROLE DO EMPURRÃO (DANO)
-// ======================================
 
 if (estado_dano)
 {
@@ -36,10 +32,7 @@ if (estado_dano)
         estado_dano = false;
 }
 
-
-// ======================================
 // VERIFICA SE NÃO ESTÁ PRESO
-// ======================================
 
 if (verificar_prisao)
 {
@@ -56,17 +49,11 @@ if (verificar_prisao)
     verificar_prisao = false;
 }
 
-
-// ======================================
 // GRAVIDADE
-// ======================================
 
 vel_y += gravidade;
 
-
-// ======================================
 // MOVIMENTO
-// ======================================
 
 var dir = 0;
 
@@ -81,10 +68,7 @@ if (!estado_dano)
         facing = dir;
 }
 
-
-// ======================================
 // COLISÃO HORIZONTAL
-// ======================================
 
 if (place_meeting(x + vel_x, y, obj_chao))
 {
@@ -96,10 +80,7 @@ if (place_meeting(x + vel_x, y, obj_chao))
 }
 x += vel_x;
 
-
-// ======================================
 // COLISÃO VERTICAL
-// ======================================
 
 if (place_meeting(x, y + vel_y, obj_chao))
 {
@@ -119,10 +100,7 @@ else
 }
 y += vel_y;
 
-
-// ======================================
-// DETECTA ATERRISSAGEM (FUMAÇA AO TOCAR CHÃO)
-// ======================================
+// DETECTA ATERRISSAGEM
 
 if (!estava_no_chao && no_chao)
 {
@@ -131,10 +109,7 @@ if (!estava_no_chao && no_chao)
 
 estava_no_chao = no_chao;
 
-
-// ======================================
-// PULO (FUMAÇA AO PULAR)
-// ======================================
+// PULO 
 
 if (keyboard_check_pressed(vk_space) && no_chao && !estado_dano)
 {

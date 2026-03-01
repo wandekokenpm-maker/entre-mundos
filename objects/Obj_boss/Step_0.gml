@@ -18,9 +18,9 @@ if (vida <= 0 && !morrendo)
 }
     
 
-    // =========================
-    // FASE 1 – 3 segundos tremendo
-    // =========================
+ 
+    // MORTE DO BOSS
+ 
     if (vida <= 0 && !morrendo)
 {
     morrendo = true;
@@ -44,9 +44,9 @@ if (vida <= 0 && !morrendo)
 {
     var cam = view_camera[0];
 
-    // =========================
+    
     // TREMOR DE TELA
-    // =========================
+    
     if (shake_timer > 0)
     {
         shake_timer--;
@@ -61,9 +61,9 @@ if (vida <= 0 && !morrendo)
         camera_set_view_pos(cam, cam_x_original, cam_y_original);
     }
 
-    // =========================
+    
     // FASE 1 – ESPERA 3s
-    // =========================
+  
     if (fase_morte == 1)
     {
         timer_morte--;
@@ -85,9 +85,9 @@ if (vida <= 0 && !morrendo)
             timer_morte = room_speed * 1.5;
         }
     }
-    // =========================
+    
     // FASE 2 – FINAL
-    // =========================
+    
     else if (fase_morte == 2)
     {
         timer_morte--;

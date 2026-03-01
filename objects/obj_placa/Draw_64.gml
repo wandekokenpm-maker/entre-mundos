@@ -29,7 +29,7 @@ if (dialogo_ativo)
    
 // Indicador de prossequir
 
-draw_set_font(fnt_dialogo); // crie uma fonte maior
+draw_set_font(fnt_dialogo); 
 draw_set_color(c_black);
 draw_set_alpha(0.9);
 

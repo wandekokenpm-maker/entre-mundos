@@ -1,7 +1,5 @@
 
-// ======================================
 // MORTE
-// ======================================
 if (vida <= 0)
 {		
 	audio_play_sound(snd_morte_inimigo, 1, false);
@@ -14,18 +12,17 @@ if (vida <= 0)
     exit;
 }
 
-// ======================================
 // PARALISAÇÃO
-// ======================================
+
 if (timer_parado > 0)
 {
     timer_parado--;
     exit;
 }
 
-// ======================================
+
 // MOVIMENTO COM PREVISÃO (CORRETO)
-// ======================================
+
 
 // Verifica antes de andar
 if (!place_meeting(x + velocidade * direcao, y, obj_chao))

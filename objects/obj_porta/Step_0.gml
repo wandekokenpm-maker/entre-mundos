@@ -7,21 +7,19 @@ if (abrindo)
         audio_play_sound(snd_porta, 1, false);
         som_tocado = true;
 
-        shake_timer = room_speed * 0.3; // tremor curto
-        shake_forca = 1; // tremor leve
+        shake_timer = room_speed * 0.3; 
+        shake_forca = 1; 
     }
 
-    // Movimento normal (lógica real)
+    // Movimento 
     if (y > y_inicial - altura_aberta)
     {
         y -= vel_subida;
     }
 }
 
-
-// ======================
 // TREMOR VISUAL
-// ======================
+
 if (shake_timer > 0)
 {
     shake_timer--;
@@ -31,6 +29,4 @@ else
 {
     y_visual = y;
 }
-
-// Aplica posição final
 y = y_visual;

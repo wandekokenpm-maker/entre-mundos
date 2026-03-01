@@ -1,10 +1,9 @@
-// ==============================
-// VIDA COM SPR_VIDA (3x MAIOR)
-// ==============================
+
+// VIDA COM SPR_VIDA 
 
 var margem_x = 15;
 var margem_y = 25;
-var espacamento = 35; // distância entre corações
+var espacamento = 35;
 
 for (var i = 0; i < vida_atual; i++)
 {
@@ -13,10 +12,10 @@ for (var i = 0; i < vida_atual; i++)
         0,
         margem_x + (i * espacamento),
         margem_y,
-        4,  // escala X (3x maior)
-        4,  // escala Y (3x maior)
-        0,
-        c_white,
-        1
+		        4,  
+		        4,  
+                0,
+		        c_white,
+		        1
     );
 }

@@ -1,8 +1,6 @@
 
-
-// ==============================
 // TEXTO BASE (PADRÃO DA PLACA)
-// ==============================
+
 
 texto =
 "Você está preso em um mundo onde as realidades estão se misturando. Para conseguir escapar, precisará transitar entre dois mundos que se chocam e se sobrepõem a cada instante.#" +
@@ -16,9 +14,8 @@ texto =
 "Você pode se mover utilizando as setas do teclado."
 
 
-// ==============================
+
 // CONTROLE INTERNO
-// ==============================
 
 linhas = [];
 texto_processado = false;

@@ -25,9 +25,9 @@ tempo_dano_sprite = 0;
 // SPRITE
 sprite_index = spr_boss;
 
-// =========================
+
 // MORTE CINEMÁTICA
-// =========================
+
 morrendo = false;
 fase_morte = 0;
 timer_morte = 0;

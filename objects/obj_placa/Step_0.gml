@@ -1,6 +1,6 @@
-// ==================================
+
 // PROCESSA TEXTO (após Creation Code)
-// ==================================
+
 
 if (!texto_processado)
 {

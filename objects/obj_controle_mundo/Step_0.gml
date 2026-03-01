@@ -7,7 +7,7 @@ if (!maquina_quebrada)
 		audio_play_sound(snd_troca_mundo, 1, false);	
         // ATIVA FLASH
         flash_alpha = 0.4;
-        flash_timer = 2.5; // duração forte do flash
+        flash_timer = 2.5; 
 
         if (global.mundo == 1)
         {
@@ -70,9 +70,9 @@ else
     }
 }
 
-// =========================
-// SISTEMA DE FLASH (FORA DE TUDO)
-// =========================
+
+// SISTEMA DE FLASH
+
 if (flash_timer > 0)
 {
     flash_timer--;
@@ -98,13 +98,13 @@ else
     nova_musica = mus_fase1;
 }
 
-// Se mudou a música
+
 if (musica_atual != nova_musica)
 {
-    // PARA TODAS AS MÚSICAS DO JOGO
+    
     audio_stop_all();
 
-    // Toca apenas a nova
+    
     musica_id = audio_play_sound(nova_musica, 0, true);
 
     musica_atual = nova_musica;

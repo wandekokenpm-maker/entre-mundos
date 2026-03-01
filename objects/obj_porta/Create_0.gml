@@ -2,8 +2,8 @@ fechada = true;
 abrindo = false;
 timer_abrir = 0;
 
-vel_subida =.3;     // velocidade que sobe
-altura_aberta = 64; // quanto ela vai subir 
+vel_subida =.3;     
+altura_aberta = 64; 
 
 y_inicial = y;
 som_tocado = false;
@@ -13,4 +13,4 @@ som_tocado = false;
 shake_timer = 0;
 shake_forca = 0;
 
-y_visual = y; // controle visual
+y_visual = y;

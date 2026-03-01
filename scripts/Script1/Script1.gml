@@ -4,7 +4,6 @@ function trocar_mundo()
     {
         global.mundo_atual = 2;
         
-        // Mundo
         instance_deactivate_layer("Layer_Mundo1");
         instance_activate_layer("Layer_Mundo2");
         
@@ -14,7 +13,6 @@ function trocar_mundo()
     {
         global.mundo_atual = 1;
         
-        // Mundo
         instance_deactivate_layer("Layer_Mundo2");
         instance_activate_layer("Layer_Mundo1");
         

@@ -1,6 +1,5 @@
-// ======================================
+
 // MOVIMENTO
-// ======================================
 vel_x = 0;
 vel_y = 0;
 
@@ -12,9 +11,8 @@ no_chao = false;
 facing = 1;
 
 
-// ======================================
 // VIDA
-// ======================================
+
 vida_maxima = 10;
 vida_atual = 5;
 
@@ -23,39 +21,30 @@ if (variable_global_exists("player_vida"))
     vida_atual = global.player_vida;
 }
 
-// ======================================
 // INVULNERABILIDADE
-// ======================================
+
 invulneravel = false;
-duracao_invulneravel = room_speed * 2; // 2 segundos
+duracao_invulneravel = room_speed * 2;
 timer_invulneravel = 0;
 
 
-// ======================================
 // SISTEMA DE DANO / KNOCKBACK
-// ======================================
+
 estado_dano = false;
-duracao_dano = 15; // frames sem controle
+duracao_dano = 15; 
 timer_dano = 0;
 
-
-// ======================================
 // SISTEMA DE MORTE
-// ======================================
+
 estado = "normal";
 duracao_morte = room_speed * 2; 
 timer_morte = 0
 
-
-// ======================================
 // CONTROLE DE SEGURANÇA
-// ======================================
+
 verificar_prisao = false;
 
-
-// ======================================
 // SPRITE PADRÃO
-// ======================================
 sprite_normal = sprite_index;
 lanterna = instance_create_layer(x, y, layer, obj_lanterna);
 
