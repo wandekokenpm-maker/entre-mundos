@@ -84,9 +84,8 @@ else if (flash_alpha > 0)
     if (flash_alpha < 0)
         flash_alpha = 0;
 }
-// ========================
+
 // CONTROLE DE MÚSICA POR ROOM
-// ========================
 
 var nova_musica;
 
@@ -102,14 +101,11 @@ else
 // Se mudou a música
 if (musica_atual != nova_musica)
 {
-    // Para música antiga
-    if (musica_atual != -1)
-    {
-        audio_stop_sound(musica_atual);
-    }
+    // PARA TODAS AS MÚSICAS DO JOGO
+    audio_stop_all();
 
-    // Toca nova música
-    audio_play_sound(nova_musica, 0, true);
+    // Toca apenas a nova
+    musica_id = audio_play_sound(nova_musica, 0, true);
 
     musica_atual = nova_musica;
 }

@@ -37,4 +37,5 @@ flash_timer = 0;
 
 // Controle de música
 musica_atual = -1;
+musica_id = -1;
 
